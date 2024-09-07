@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Content</h1>
+    <ul>
+        {% for _, row in recommendations.iterrows() %}
+            <li>{{ row.title }} ({{ row.genre }}) - Rating: {{ row.rating }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to search</a>
+</body>
+</html>
